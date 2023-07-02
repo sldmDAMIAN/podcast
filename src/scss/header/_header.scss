@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-image: linear-gradient(to bottom, rgb(0 0 0 / .1), rgb(0 0 0 / 1)), -webkit-image-set(url(../img/header.avif) 1x, url(../img/header.webp) 1x, url(../img/header.jpg) 1x);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 5rem 0;
+
+    &__logo {
+        max-width: 20rem;
+        margin: 0 auto;
+
+        @include m.tablet {
+            margin: 0;
+        }        
+    }
+
+    &__contenido {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+
+        @include m.desktop {
+            padding-top: 15rem;
+            padding-bottom: 15rem;
+        }
+        
+    }
+
+    &__heading {
+        color: v.$blanco;
+        font-size: 4.5rem;
+        line-height: 1.5;
+
+        @include m.tablet {
+            font-size: 6rem;
+        }
+        
+        @include m.desktop {
+            max-width: 40%;
+        }
+        
+    }
+}
